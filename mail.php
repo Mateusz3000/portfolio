@@ -22,7 +22,7 @@ if ($bledy)
 } else
 {
 //jeśli nie ma błędów próbujemy wysłać maila
-    $temat= "=?UTF-8?B?".base64_encode("Wiadomość ze strony internetowej windandflwer.com od ".$_POST['nazwisko'])."?=";
+    $temat= "=?UTF-8?B?".base64_encode("Wiadomość ze strony internetowej mateuszportfolio.xaa.pl od ".$_POST['nazwisko'])."?=";
     $naglowki = "Reply-to:".$_POST['mail'].PHP_EOL;
     $naglowki .= "From: ".$_POST['mail'].PHP_EOL;
     $naglowki .= "MIME-Version: 1.0".PHP_EOL;
