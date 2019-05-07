@@ -1,0 +1,66 @@
+@import "style.scss";
+
+@media (min-width: 1500px) {
+  .logo {
+    margin-bottom: 5em;
+  }
+
+  .nav-item {
+    display: block;
+    margin: 7vh 0;
+  }
+}
+
+@media (max-width: 1280px) {
+  #kontakt{
+    .contactText {
+      margin-bottom: 25px;
+    }
+
+    .formMessage {
+      text-align: center;
+      width: 97%;
+      background: rgba(0, 0, 0, 0.2);
+      position:relative;
+      margin: 0 0 0 20px;
+      padding: 20px;
+      border: #bdb081 1px dashed;
+      float: none;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  #kontakt{
+    .formMessage {
+      width: 96%;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  #kontakt{
+    .formMessage {
+      width: 95%;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  #kontakt{
+    .formMessage {
+      width: 94%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  #kontakt{
+    form textarea {
+      width: 100%;
+    }
+    .formMessage {
+      width: 90%;
+    }
+  }
+}

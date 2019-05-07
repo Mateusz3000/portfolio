@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Portfolio Mateusza Draba</title>
+  <script type="text/javascript" src="js/jquery-2.1.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/styleRWD.css" />
+  <!-- Magnific Popup core CSS file -->
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+    <!-- Magnific Popup core JS file -->
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="js/form.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+          initMagnificPopUp();
+          smoothScrolling();
+          function initMagnificPopUp() {
+
+            $('.gallery').magnificPopup({
+                delegate: 'a', // child items selector, by clicking on it popup will open
+                type: 'image',
+
+                gallery: {
+                    enabled: true,
+                }
+            });
+
+            $('.image-link').magnificPopup({
+                type: 'image'
+            });
+          }
+
+          function smoothScrolling(){
+            $('nav a[href^="#"]').on('click', function (e) {
+              e.preventDefault();
+
+              var target = this.hash;
+              var $target = $(target);
+
+              // Scroll and show hash
+              $('html, body').animate({
+                'scrollTop': $target.offset().top
+              }, 1500, 'easeInOutQuart', function () {
+                window.location.hash = target;
+              });
+            });
+          }
+        });
+    </script>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo">Mateusz Drab <span>Portfolio</span></div>
+  </div>
+  <nav>
+    <a href="#o_mnie" class="nav-item">O mnie</a>
+    <a href="#galeria" class="nav-item">Portfolio</a>
+    <a href="#kontakt" class="nav-item">Kontakt</a>
+  </nav>
+  <div class="main-content">
+    <section id="o_mnie">
+      <h4>Witam serdecznie!</h4>
+      <a href="img/mateusz4.png"><img src="img/mateusz4.png" alt="Mateusz Drab" width="250" height="400" /></a>
+      <p>Mateusz Drab, ur. 28.06.1987 r. W 2017 r. odbyłem kurs grafiki komputerowej i projektowania stron WWW.</p>
+      <p>Referencje do pobrania po kliknięciu przycisku download.</p>
+      <p><a class="download" href="http://www.webuilder.pl/wp-content/uploads/2018/05/certyfikat-1-min.pdf" target="_blank" rel="noopener"> <img src="img/download.png" alt="pobierz" width="236" height="51" /> </a></p>
+  </section>
+
+  <section id="galeria" class="portfolio gallery">
+    <a class="portfolio-item medium one" href="img/galeria/awers.jpg">Awers</a>
+    <a class="portfolio-item large two" href="img/galeria/rewers.jpg">Rewers</a>
+    <a class="portfolio-item medium three" href="img/galeria/Ulotka-reklamowa.jpg">Ulotka</a>
+    <a class="portfolio-item small four" href="img/galeria/tlo.png">Tło</a>
+    <a class="portfolio-item tall five" href="img/galeria/ulotka_biura_podrozy.jpg">Ulotka biura podroży</a>
+    <a class="portfolio-item wide six" href="img/galeria/Afryka.jpg">Pani Afryka</a>
+    <a class="portfolio-item wide seven" href="img/galeria/ala_andy_warhol.jpg">Al 'a Andy Warhol</a>
+    <a class="portfolio-item medium eight" href="img/galeria/modelka-1.jpg">Modelka</a>
+  </section>
+
+  <section id="kontakt">
+    <div class="middle">
+  		<div class="bottomBG">
+  			<div class="shadow">
+  				<div>
+  					<h1>KONTAKT</h1>
+  					<div class="contactText">
+  						Jeśli masz jakieś pytania, uwagi czy propozycje współpracy skontaktuj się ze mną za pomocą formularza umieszczonego obok. Postaram się odpowiedzieć możliwie jak najszybciej.
+  					</div>
+  					<div class="formMessage">Wiadomość została wysłana!</div>
+  					<form action="mail.php" method="post" id="form">
+  						<label>Imię i nazwisko:</label>
+  						<input type="text" value="" name="nazwisko" />
+  						<label>Twój adres email:</label>
+  						<input type="text" value="" name="mail" />
+  						<label>Treść wiadomości:</label>
+  						<textarea name="wiadomosc" rows="10"></textarea>
+  						<input type="submit"  value=""/>
+  					</form>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  </section>
+</div>
+</body>
+</html>
