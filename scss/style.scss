@@ -88,8 +88,10 @@ nav {
 
   img {
     border-radius: 50%;
-    height: auto;
-    max-width: 10%;
+    max-height: 50%;
+    max-width: 30%;
+    box-shadow: 0 3px 25px #333;
+    border: 10px solid #555;
   }
 }
 

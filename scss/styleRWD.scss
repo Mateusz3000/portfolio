@@ -31,6 +31,15 @@
 }
 
 @media (max-width: 1024px) {
+
+  #o_mnie {
+
+    img {
+      border-radius: 50%;
+      max-height: auto;
+      max-width: 80%;
+    }
+  }
   #kontakt{
     .formMessage {
       width: 96%;
